@@ -4,7 +4,6 @@ import LanguageDetector from "i18next-browser-languagedetector";
 // import translationEn from "./local/en.json";
 // import translationAr from "./local/ar.json";
 import HttpApi from "i18next-http-backend";
-
 // const resources = {
 //   en: {
 //     translation: translationEn,
