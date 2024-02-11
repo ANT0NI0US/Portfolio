@@ -1,0 +1,31 @@
+{
+  "validation": {
+    "this_field_is_required": "This field is required",
+    "it_must_not_contain_only_spaces": "It must not contain only spaces",
+    "invalid_email": "Invalid Email"
+  },
+  "navbar": {
+    "home": "Home",
+    "skills": "Skills",
+    "projects": "Projects",
+    "let_connect": "Let’s Connect"
+  },
+  "banner": {
+    "welcome_portfolio": "Welcome to my Portfolio",
+    "hi_iam": "Hi I'm ",
+    "antonious_nasr": "Antonious Nasr",
+    "frontend_developer": "Frontend Developer",
+    "banner_desc": "Iam dedicated to crafting immersive and user-centric digital experiences. With a keen eye for design and a commitment to seamless functionality, I bring websites to life through a combination of creativity and technical expertise.",
+    "my_cv": "My CV"
+  },
+  "contact_us": {
+    "get_in_touch": "Get In Touch",
+    "first_name": "First Name",
+    "last_name": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone No.",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending ...."
+  }
+}
