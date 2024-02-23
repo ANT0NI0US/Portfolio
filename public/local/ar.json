@@ -18,6 +18,94 @@
     "banner_desc": "أنا ملتزم بصنع تجارب رقمية جذابة ومحورة حول المستخدم. بفضل عين حادة للتصميم والتفاني في تحقيق وظائف بلا عوائق، أعيش المواقع عبر مزيج من الإبداع والخبرة التقنية.",
     "my_cv": "سيرتي الذاتية"
   },
+  "skills": {
+    "skills":"المهارات",
+    "skills_desc": "بصفتي مطورًا أماميًا ملتزمًا، أمتلك مجموعة قوية من المهارات في إنشاء واجهات مستخدم جذابة ومتجاوبة. بفضل خبرتي في كل من التصميم والوظائف، أقدم خبرتي في مختلف تقنيات تطوير الواجهة الأمامية لتوفير تجارب ويب سلسة وجذابة بصريًا. تشمل مهاراتي اللغات والأدوات الأساسية، مما يضمن نهجاً شاملاً في تطوير الويب.",
+    "all_skills": {
+      "Core_Languages": {
+        "Core_Language": "اللغات الاساسية:",
+        "EndValue": 96
+      },
+      "Frontend_Frameworks": {
+        "Frontend_Framework": "مكتبات وأطُر الواجهة الأمامية:",
+        "EndValue": 95
+      },
+      "Styling_Frameworks": {
+        "Styling_Framework": "أطُر التصميم:",
+        "EndValue": 100
+      },
+      "Version_Control": {
+        "Version_Control": "نظام التحكم في النسخ:",
+        "EndValue": 100
+      },
+      "Tools_Utilities": {
+        "Tools_Utilities": "الأدوات والخدمات العامة:",
+        "EndValue": 100
+      },
+      "State Management": {
+        "State Management": "إدارة الحالة:",
+        "EndValue": 100
+      },
+      "Performance_Optimization": {
+        "Performance_Optimization": "تحسين الأداء:",
+        "EndValue": 100,
+        "type": "تعزيز سرعة وأداء الموقع"
+      },
+      "Soft_Skills": {
+        "Soft_Skills": "المهارات الشخصية:",
+        "EndValue": 95,
+        "type": {
+          "Effective_communication": "التعاون والتواصل الفعّال",
+          "Proficient_English": "إجادة اللغة الإنجليزية"
+        }
+      }
+    }
+  },
+  "projects": {
+    "projects": "المشاريع",
+    "projects_desc": "استكشف تصاميم موقعي السهلة الاستخدام والتي تبدو رائعة. استمتع بتجربة أفضل عبر الإنترنت مع واجهات بسيطة وسهلة الاستخدام.",
+    "description": "التصميم والتطوير",
+    "GraduationProject": {
+      "title": "LMS"
+    },
+    "HtmlCssJava": {
+      "mindGame": {
+        "title": "لعبة العقل"
+      },
+      "darkModeProject": {
+        "title": "مشروع الوضع الليلي"
+      },
+      "firstProject": {
+        "title": "المشروع الأول"
+      },
+      "cartoonProject": {
+        "title": "مشروع الكرتون"
+      },
+      "quiz": {
+        "title": "اختبار"
+      },
+      "sliderController": {
+        "title": "تحكم بالشرائح"
+      },
+      "todoList": {
+        "title": "قائمة المهام"
+      },
+      "dashboard": {
+        "title": "لوحة التحكم"
+      },
+      "hangmanGame": {
+        "title": "لعبة الرجل المشنوق"
+      }
+    },
+    "htmlBooststrap": {
+      "bondiProject": {
+        "title": "مشروع بوندي"
+      },
+      "eliteCropProject": {
+        "title": "مشروع إليت كروب"
+      }
+    }
+  },
   "contact_us": {
     "get_in_touch": "تواصل معنا",
     "first_name": "الاسم الأول",
@@ -27,5 +115,10 @@
     "message": "الرسالة",
     "send": "إرسال",
     "sending": "جاري الإرسال...."
+  },
+  "footer": {
+    "egypt-cairo": "مصر، القاهرة",
+    "my-phone-number": "٠١٢٨٥٥٥١٤٧٩",
+    "the-year": "© ٢٠٢٤"
   }
 }

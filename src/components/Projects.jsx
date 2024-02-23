@@ -12,89 +12,96 @@ import projImg9 from "../assets/img/projects/bootstrap-project-2.PNG";
 import projImg10 from "../assets/img/projects/slider control.PNG";
 import projImg11 from "../assets/img/projects/todo List.PNG";
 import projImg12 from "../assets/img/projects/LMS (Ain shams).PNG";
+import ResticoProject from "../assets/img/projects/Restico.PNG";
+import ChatbotProject from "../assets/img/projects/ChatBot.PNG";
+import ClincProject from "../assets/img/projects/Clinc.PNG";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { useTranslation } from "react-i18next";
 
 export const Projects = () => {
-  const GraduationProjects = [
+  const [t] = useTranslation();
+
+  const React = [
     {
-      title: "LMS (React)",
-      description: "Design & Development",
+      title: "ChatBot",
+      description: t("projects.description"),
+      imgUrl: ChatbotProject,
+      url: "https://chatbotv2.mygatein.com/#/login",
+    },
+    {
+      title: t("projects.GraduationProject.title"),
+      description: t("projects.description"),
       imgUrl: projImg12,
       url: "https://drive.google.com/file/d/1XKfzSKEvQWMN1oy2mxsOZXppuKHrVFe2/view?usp=sharing",
+    },
+    {
+      title: "Restico",
+      description: t("projects.description"),
+      imgUrl: ResticoProject,
+      url: "https://restecho.portal.smartgate-egypt.com/",
+    },
+    {
+      title: "Clinc Markter",
+      description: t("projects.description"),
+      imgUrl: ClincProject,
+      url: "https://portal.clinicmarkter.niyat.sa/#/adminlogin",
     },
   ];
 
   const HtmlCssJava = [
     {
-      title: "mind game",
-      description: "Design & Development",
-      imgUrl: projImg4,
-      url: "https://mind-game-project.netlify.app/",
-    },
-    {
-      title: "dark-mode-project",
-      description: "Design & Development",
+      title: t("projects.HtmlCssJava.darkModeProject.title"),
+      description: t("projects.description"),
       imgUrl: projImg5,
       url: "https://slider-dark-mode.netlify.app/",
     },
     {
-      title: "First Project",
-      description: "Design & Development",
+      title: t("projects.HtmlCssJava.firstProject.title"),
+      description: t("projects.description"),
       imgUrl: projImg1,
       url: "https://html-css-first-project.netlify.app/",
     },
     {
-      title: "Cartoon project",
-      description: "Design & Development",
+      title: t("projects.HtmlCssJava.cartoonProject.title"),
+      description: t("projects.description"),
       imgUrl: projImg7,
       url: "https://cartoon-projectt.netlify.app/",
     },
     {
-      title: "Quiz",
-      description: "Design & Development",
-      imgUrl: projImg8,
-      url: "https://timer-json-quiz.netlify.app/",
-    },
-    {
-      title: "Slider Controller",
-      description: "Design & Development",
-      imgUrl: projImg10,
-      url: "https://slider-control.netlify.app/",
-    },
-    {
-      title: "todo List",
-      description: "Design & Development",
-      imgUrl: projImg11,
-      url: "https://todo-projectt.netlify.app/",
-    },
-    {
-      title: "dashboard",
-      description: "Design & Development",
+      title: t("projects.HtmlCssJava.dashboard.title"),
+      description: t("projects.description"),
       imgUrl: projImg6,
       url: "https://dashboard-css-html.netlify.app/",
     },
+
     {
-      title: "Hangman game",
-      description: "Design & Development",
-      imgUrl: projImg3,
-      url: "https://hangout-game.netlify.app/",
+      title: t("projects.htmlBooststrap.bondiProject.title"),
+      description: t("projects.description"),
+      imgUrl: projImg2,
+      url: "https://bootstrap-project-onee.netlify.app/",
+    },
+    {
+      title: t("projects.htmlBooststrap.eliteCropProject.title"),
+      description: t("projects.description"),
+      imgUrl: projImg9,
+      url: "https://bootstrap-project-twoo.netlify.app/",
     },
   ];
 
   const htmlBooststrap = [
     {
-      title: "Bondi project",
-      description: "Design & Development",
-      imgUrl: projImg2,
-      url: "https://bootstrap-project-onee.netlify.app/",
+      title: t("projects.HtmlCssJava.mindGame.title"),
+      description: t("projects.description"),
+      imgUrl: projImg4,
+      url: "https://mind-game-project.netlify.app/",
     },
     {
-      title: "EliteCrop project",
-      description: "Design & Development",
-      imgUrl: projImg9,
-      url: "https://bootstrap-project-twoo.netlify.app/",
+      title: t("projects.HtmlCssJava.hangmanGame.title"),
+      description: t("projects.description"),
+      imgUrl: projImg3,
+      url: "https://hangout-game.netlify.app/",
     },
   ];
 
@@ -110,29 +117,23 @@ export const Projects = () => {
                     isVisible ? "animate__animated animate__fadeIn" : ""
                   }
                 >
-                  <h2 className="first-paragraph">Projects</h2>
-                  <p>
-                    Architecting Digital Wonders: Transforming Vision into
-                    Interactive Front-End Realities, Where Coding Brilliance
-                    Unleashes the Power of Alchemy, and Lines of Code Weave the
-                    Tapestry of Technological Innovation.
-                  </p>
+                  <h2 className="first-paragraph">{t("projects.projects")}</h2>
+                  <p>{t("projects.projects_desc")}</p>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
                       variant="pills"
                       className="nav-pills mb-5 justify-content-center align-items-center"
                       id="pills-tab"
+                      style={{ direction: "ltr" }}
                     >
                       <Nav.Item>
                         <Nav.Link eventKey="first">React</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="second">
-                          Javascript
-                        </Nav.Link>
+                        <Nav.Link eventKey="second">Html & CSS</Nav.Link>
                       </Nav.Item>
                       <Nav.Item>
-                        <Nav.Link eventKey="third">Bootstrap</Nav.Link>
+                        <Nav.Link eventKey="third">Simple Games</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content
@@ -143,7 +144,7 @@ export const Projects = () => {
                     >
                       <Tab.Pane eventKey="first">
                         <Row>
-                          {GraduationProjects.map((project, index) => {
+                          {React.map((project, index) => {
                             return <ProjectCard key={index} {...project} />;
                           })}
                         </Row>

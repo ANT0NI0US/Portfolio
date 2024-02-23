@@ -1,63 +1,77 @@
+import { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import colorSharp from "../assets/img/color-sharp.png";
-import { useEffect, useState } from "react";
-
+import { useTranslation } from "react-i18next";
 export const Skills = () => {
-  const [progressData, setProgressData] = useState([
-    {
-      progressValue: 0,
-      progressEndValue: 96,
-      name: "Core Languages:",
-      type: ["Html", "CSS", "JavaScript"],
-    },
-    {
-      progressValue: 0,
-      progressEndValue: 95,
-      name: "Frontend Libraries & Frameworks:",
-      type: ["React", "Vue"],
-    },
-    {
-      progressValue: 0,
-      progressEndValue: 100,
-      name: "Styling  Frameworks:",
-      type: ["Material UI", "Chakra UI", "Tailwind CSS", "Bootstrap"],
-    },
-    {
-      progressValue: 0,
-      progressEndValue: 100,
-      name: "Version Control:",
-      type: ["Git"],
-    },
-    {
-      progressValue: 0,
-      progressEndValue: 100,
-      name: "Tools & Utilities:",
-      type: ["Webpack", "npm"],
-    },
-    {
-      progressValue: 0,
-      progressEndValue: 100,
-      name: "State Management:",
-      type: ["Redux"],
-    },
-    {
-      progressValue: 0,
-      progressEndValue: 100,
-      name: "Performance Optimization:",
-      type: ["Enhancing website speed and performance"],
-    },
-    {
-      progressValue: 0,
-      progressEndValue: 95,
-      name: "Soft Skills:",
-      type: [
-        "Effective collaboration and communication",
-        "Proficient in English",
-      ],
-    },
-  ]);
+  const [t, i18n] = useTranslation();
+  const [progressData, setProgressData] = useState([{}]);
+
+  useEffect(() => {
+    setProgressData([
+      {
+        progressValue: 0,
+        progressEndValue: 96,
+        name: t("skills.all_skills.Core_Languages.Core_Language"),
+        type: [
+          "Html",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "C++",
+          "C#",
+          "Python",
+        ],
+      },
+      {
+        progressValue: 0,
+        progressEndValue: 95,
+        name: t("skills.all_skills.Frontend_Frameworks.Frontend_Framework"),
+        type: ["React", "Vue"],
+      },
+      {
+        progressValue: 0,
+        progressEndValue: 100,
+        name: t("skills.all_skills.Styling_Frameworks.Styling_Framework"),
+        type: ["Material UI", "Chakra UI", "Tailwind CSS", "Bootstrap"],
+      },
+      {
+        progressValue: 0,
+        progressEndValue: 100,
+        name: t("skills.all_skills.Version_Control.Version_Control"),
+        type: ["Git"],
+      },
+      {
+        progressValue: 0,
+        progressEndValue: 100,
+        name: t("skills.all_skills.Tools_Utilities.Tools_Utilities"),
+        type: ["Webpack", "npm"],
+      },
+      {
+        progressValue: 0,
+        progressEndValue: 100,
+        name: t("skills.all_skills.State Management.State Management"),
+        type: ["Redux"],
+      },
+      {
+        progressValue: 0,
+        progressEndValue: 100,
+        name: t(
+          "skills.all_skills.Performance_Optimization.Performance_Optimization"
+        ),
+        type: [t("skills.all_skills.Performance_Optimization.type")],
+      },
+      {
+        progressValue: 0,
+        progressEndValue: 95,
+        name: t("skills.all_skills.Soft_Skills.Soft_Skills"),
+        type: [
+          t("skills.all_skills.Soft_Skills.type.Effective_communication"),
+          t("skills.all_skills.Soft_Skills.type.Proficient_English"),
+        ],
+      },
+    ]);
+  }, [i18n.language]);
 
   const [isVisible, setIsVisible] = useState(false);
 
@@ -118,6 +132,7 @@ export const Skills = () => {
       100
     )}%)`;
   };
+  // 	#d0d0d0 , black
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -144,15 +159,8 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2 className="first-paragraph">Skills</h2>
-              <p>
-                As a dedicated frontend developer, I possess a robust skill set
-                in creating engaging and responsive user interfaces. Proficient
-                in both design and functionality, I bring expertise in various
-                frontend technologies to deliver seamless and visually appealing
-                web experiences. My skills encompass the essential languages and
-                tools, ensuring a well-rounded approach to web development.
-              </p>
+              <h2 className="first-paragraph">{t("skills.skills")}</h2>
+              <p>{t("skills.skills_desc")}</p>
 
               <Carousel
                 responsive={responsive}
@@ -171,16 +179,19 @@ export const Skills = () => {
                         bar.progressValue
                       )}%`}</div>
                     </div>
-                    <div className="skill-name">{bar.name}</div>
-                    <ul className="skill-name-types">
-                      {/* Display type if it exists */}
-                      {bar.type &&
-                        bar.type.map((type, typeIndex) => (
-                          <li key={typeIndex} className="skill-type">
-                            {type}
-                          </li>
-                        ))}
-                    </ul>
+                    <div
+                      className={`${i18n.language === "ar" ? "ltr" : "rtl"}`}
+                    >
+                      <div className="skill-name">{bar.name}</div>
+                      <ul className="skill-name-types">
+                        {bar.type &&
+                          bar.type.map((type, typeIndex) => (
+                            <li key={typeIndex} className="skill-type">
+                              {type}
+                            </li>
+                          ))}
+                      </ul>
+                    </div>
                   </div>
                 ))}
               </Carousel>

@@ -10,7 +10,7 @@ import { useTranslation } from "react-i18next";
 export const Banner = () => {
   const [t] = useTranslation();
   const downloadFile = () => {
-    const fileId = "1l9gNcCumBJUVp8BlgT4btDncKX-dWKtu";
+    const fileId = "1iuGI6HqP9_O8LtnWWu1OGFlmmLITeS_H";
     const downloadUrl = `https://drive.google.com/uc?id=${fileId}`;
     const link = document.createElement("a");
     link.href = downloadUrl;
