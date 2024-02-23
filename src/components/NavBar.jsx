@@ -1,12 +1,14 @@
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import logo from "../assets/img/my-logo.png";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
-import { MdOutlineLanguage } from "react-icons/md";
 import { useTranslation } from "react-i18next";
+import { MdOutlineLanguage } from "react-icons/md";
+import { useTheme } from "../ThemeProvider";
 
 export const NavBar = () => {
+  const { toggleTheme } = useTheme();
   const [t, i18n] = useTranslation();
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
@@ -31,16 +33,30 @@ export const NavBar = () => {
 
   const [selectedLanguage, setSelectedLanguage] = useState("en");
 
-  const handleLanguageChange = (event) => {
-    setSelectedLanguage(event.target.value);
-    i18n.changeLanguage(event.target.value);
-    
+  const handleLanguageChange = (languageType) => {
+    setSelectedLanguage(languageType);
+    i18n.changeLanguage(languageType);
   };
 
   useEffect(() => {
     const dir = i18n.dir(i18n.language);
     document.documentElement.dir = dir;
- }, [i18n, i18n.language]);
+  }, [i18n, i18n.language]);
+
+  useEffect(() => {
+    const getCookie = (name) => {
+      const cookies = document.cookie.split(";");
+      for (let i = 0; i < cookies.length; i++) {
+        const cookie = cookies[i].trim();
+        if (cookie.startsWith(name + "=")) {
+          return cookie.substring(name.length + 1);
+        }
+      }
+      return null;
+    };
+    const languageCookie = getCookie("language");
+    setSelectedLanguage(languageCookie);
+  }, []);
 
   return (
     <Router>
@@ -71,7 +87,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("skills")}
               >
-              {t("navbar.skills")}
+                {t("navbar.skills")}
               </Nav.Link>
               <Nav.Link
                 href="#projects"
@@ -82,7 +98,7 @@ export const NavBar = () => {
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
-              {t("navbar.projects")}
+                {t("navbar.projects")}
               </Nav.Link>
             </Nav>
             <span className="navbar-text">
@@ -92,7 +108,8 @@ export const NavBar = () => {
                 </button>
               </HashLink>
             </span>
-            <div className="select-cont">
+
+            {/*<div className="select-cont">
               <div className="langauage-icon-cont">
                 <MdOutlineLanguage />
               </div>
@@ -100,6 +117,37 @@ export const NavBar = () => {
                 <option value="en">English</option>
                 <option value="ar">Arabic</option>
               </select>
+            </div>*/}
+
+            <div className="select-cont">
+              <div className="langauage-icon-cont">
+                <NavDropdown
+                  title="Settings"
+                  id="settings-dropdown"
+                  className="ms-auto"
+                >
+                  <NavDropdown className="dropstart" title="Dark Mode">
+                    <NavDropdown.Item onClick={() => toggleTheme("light")}>
+                      Light
+                    </NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => toggleTheme("dark")}>
+                      Dark
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                  <NavDropdown title="Languages" className="dropstart">
+                    <NavDropdown.Item
+                      onClick={() => handleLanguageChange("en")}
+                    >
+                      English
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      onClick={() => handleLanguageChange("ar")}
+                    >
+                      Arabic
+                    </NavDropdown.Item>
+                  </NavDropdown>
+                </NavDropdown>
+              </div>
             </div>
           </Navbar.Collapse>
         </Container>

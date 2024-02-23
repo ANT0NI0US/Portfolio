@@ -18,6 +18,94 @@
     "banner_desc": "Iam dedicated to crafting immersive and user-centric digital experiences. With a keen eye for design and a commitment to seamless functionality, I bring websites to life through a combination of creativity and technical expertise.",
     "my_cv": "My CV"
   },
+  "skills": {
+    "skills":"Skills",
+    "skills_desc": "As a dedicated frontend developer, I possess a robust skill set in creating engaging and responsive user interfaces. Proficient in both design and functionality, I bring expertise in various frontend technologies to deliver seamless and visually appealing web experiences. My skills encompass the essential languages and tools, ensuring a well-rounded approach to web development.",
+    "all_skills": {
+      "Core_Languages": {
+        "Core_Language": "Core Languages:",
+        "EndValue": 96
+      },
+      "Frontend_Frameworks": {
+        "Frontend_Framework": "Frontend Libraries & Frameworks:",
+        "EndValue": 95
+      },
+      "Styling_Frameworks": {
+        "Styling_Framework": "Styling  Frameworks:",
+        "EndValue": 100
+      },
+      "Version_Control": {
+        "Version_Control": "Version Control:",
+        "EndValue": 100
+      },
+      "Tools_Utilities": {
+        "Tools_Utilities": "Tools & Utilities:",
+        "EndValue": 100
+      },
+      "State Management": {
+        "State Management": "State Management:",
+        "EndValue": 100
+      },
+      "Performance_Optimization": {
+        "Performance_Optimization": "Performance Optimization:",
+        "EndValue": 100,
+        "type": "Enhancing website speed and performance"
+      },
+      "Soft_Skills": {
+        "Soft_Skills": "Soft Skills:",
+        "EndValue": 95,
+        "type": {
+          "Effective_communication": "Effective collaboration and communication",
+          "Proficient_English": "Proficient in English"
+        }
+      }
+    }
+  },
+  "projects": {
+    "projects": "Projects",
+    "projects_desc": "Explore my website designs that are easy to use and look great. Enjoy a better online experience with simple and user-friendly interfaces.",
+    "description": "Design & Development",
+    "GraduationProject": {
+      "title": "LMS"
+    },
+    "HtmlCssJava": {
+      "mindGame": {
+        "title": "Mind Game"
+      },
+      "darkModeProject": {
+        "title": "Dark Mode Project"
+      },
+      "firstProject": {
+        "title": "First Project"
+      },
+      "cartoonProject": {
+        "title": "Cartoon Project"
+      },
+      "quiz": {
+        "title": "Quiz"
+      },
+      "sliderController": {
+        "title": "Slider Controller"
+      },
+      "todoList": {
+        "title": "Todo List"
+      },
+      "dashboard": {
+        "title": "Dashboard"
+      },
+      "hangmanGame": {
+        "title": "Hangman Game"
+      }
+    },
+    "htmlBooststrap": {
+      "bondiProject": {
+        "title": "Bondi Project"
+      },
+      "eliteCropProject": {
+        "title": "EliteCrop Project"
+      }
+    }
+  },
   "contact_us": {
     "get_in_touch": "Get In Touch",
     "first_name": "First Name",
@@ -27,5 +115,10 @@
     "message": "Message",
     "send": "Send",
     "sending": "Sending ...."
+  },
+  "footer": {
+    "egypt-cairo": "Egypt , Cairo",
+    "my-phone-number": "01285551479",
+    "the-year": "© 2024"
   }
 }
