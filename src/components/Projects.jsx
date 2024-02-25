@@ -1,21 +1,5 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/projects/html-css-first-project.PNG";
-import projImg2 from "../assets/img/projects/bootstrap-project-one.PNG";
-import projImg3 from "../assets/img/projects/hangman-game.PNG";
-import projImg4 from "../assets/img/projects/mind-game.PNG";
-import projImg5 from "../assets/img/projects/dark-mode-project.PNG";
-import projImg6 from "../assets/img/projects/dashboard.PNG";
-import projImg7 from "../assets/img/projects/cartoon project.PNG";
-import projImg8 from "../assets/img/projects/Quiz.PNG";
-import projImg9 from "../assets/img/projects/bootstrap-project-2.PNG";
-import projImg10 from "../assets/img/projects/slider control.PNG";
-import projImg11 from "../assets/img/projects/todo List.PNG";
-import projImg12 from "../assets/img/projects/LMS (Ain shams).PNG";
-import ResticoProject from "../assets/img/projects/Restico.PNG";
-import ChatbotProject from "../assets/img/projects/ChatBot.PNG";
-import ClincProject from "../assets/img/projects/Clinc.PNG";
-import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { useTranslation } from "react-i18next";
@@ -27,25 +11,25 @@ export const Projects = () => {
     {
       title: "ChatBot",
       description: t("projects.description"),
-      imgUrl: ChatbotProject,
+      imgUrl: "https://i.ibb.co/gthm3Hb/ChatBot.webp",
       url: "https://chatbotv2.mygatein.com/#/login",
     },
     {
       title: t("projects.GraduationProject.title"),
       description: t("projects.description"),
-      imgUrl: projImg12,
+      imgUrl: `https://i.ibb.co/SxC6C4D/LMS-Ain-shams.webp`,
       url: "https://drive.google.com/file/d/1XKfzSKEvQWMN1oy2mxsOZXppuKHrVFe2/view?usp=sharing",
     },
     {
       title: "Restico",
       description: t("projects.description"),
-      imgUrl: ResticoProject,
+      imgUrl: "https://i.ibb.co/4PpHkc7/Restico.webp",
       url: "https://restecho.portal.smartgate-egypt.com/",
     },
     {
       title: "Clinc Markter",
       description: t("projects.description"),
-      imgUrl: ClincProject,
+      imgUrl: "https://i.ibb.co/mXb7bSP/Clinc.webp",
       url: "https://portal.clinicmarkter.niyat.sa/#/adminlogin",
     },
   ];
@@ -54,38 +38,37 @@ export const Projects = () => {
     {
       title: t("projects.HtmlCssJava.darkModeProject.title"),
       description: t("projects.description"),
-      imgUrl: projImg5,
+      imgUrl: "https://i.ibb.co/7zqq3Fs/dark-mode-project.webp",
       url: "https://slider-dark-mode.netlify.app/",
     },
     {
       title: t("projects.HtmlCssJava.firstProject.title"),
       description: t("projects.description"),
-      imgUrl: projImg1,
+      imgUrl: "https://i.ibb.co/py9SBWx/html-css-first-project.webp",
       url: "https://html-css-first-project.netlify.app/",
     },
     {
       title: t("projects.HtmlCssJava.cartoonProject.title"),
       description: t("projects.description"),
-      imgUrl: projImg7,
+      imgUrl: "https://i.ibb.co/zXKb8tV/cartoon-project.webp",
       url: "https://cartoon-projectt.netlify.app/",
     },
     {
       title: t("projects.HtmlCssJava.dashboard.title"),
       description: t("projects.description"),
-      imgUrl: projImg6,
+      imgUrl: "https://i.ibb.co/TcQMCSJ/dashboard.webp",
       url: "https://dashboard-css-html.netlify.app/",
     },
-
     {
       title: t("projects.htmlBooststrap.bondiProject.title"),
       description: t("projects.description"),
-      imgUrl: projImg2,
+      imgUrl: "https://i.ibb.co/z6jF1nR/bootstrap-project-one.webp",
       url: "https://bootstrap-project-onee.netlify.app/",
     },
     {
       title: t("projects.htmlBooststrap.eliteCropProject.title"),
       description: t("projects.description"),
-      imgUrl: projImg9,
+      imgUrl: "https://i.ibb.co/02thynj/bootstrap-project-2.webp",
       url: "https://bootstrap-project-twoo.netlify.app/",
     },
   ];
@@ -94,14 +77,20 @@ export const Projects = () => {
     {
       title: t("projects.HtmlCssJava.mindGame.title"),
       description: t("projects.description"),
-      imgUrl: projImg4,
+      imgUrl: "https://i.ibb.co/xGn5qyc/mind-game.webp",
       url: "https://mind-game-project.netlify.app/",
     },
     {
       title: t("projects.HtmlCssJava.hangmanGame.title"),
       description: t("projects.description"),
-      imgUrl: projImg3,
+      imgUrl: "https://i.ibb.co/vdmCMbD/hangman-game.webp",
       url: "https://hangout-game.netlify.app/",
+    },
+    {
+      title: t("projects.HtmlCssJava.quiz.title"),
+      description: t("projects.description"),
+      imgUrl: "https://i.ibb.co/KsqhmPm/Quiz.webp",
+      url: "https://timer-json-quiz.netlify.app/",
     },
   ];
 
@@ -171,7 +160,6 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
     </section>
   );
 };
