@@ -31,7 +31,6 @@ export const Contact = () => {
 
   const sendEmail = () => {
     setButtonText(t("contact_us.sending"));
-    console.log("form.currnet", form.current);
     emailjs
       .sendForm("service_yijk9v8", "template_dolvl3a", form.current, {
         publicKey: "6QvN4Nf3y_u1VDO44",
@@ -245,7 +244,7 @@ export const Contact = () => {
                             </Fragment>
                           )}
                         />
-                        <button type="submit">
+                        <button type="submit" aria-label="Submit Form">
                           <span>{buttonText}</span>
                         </button>
                       </Col>

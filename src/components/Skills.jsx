@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import colorSharp from "../assets/img/color-sharp.png";
 import { useTranslation } from "react-i18next";
 export const Skills = () => {
   const [t, i18n] = useTranslation();
@@ -132,7 +131,7 @@ export const Skills = () => {
       100
     )}%)`;
   };
-  // 	#d0d0d0 , black
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -199,7 +198,6 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };

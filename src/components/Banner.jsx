@@ -32,13 +32,15 @@ export const Banner = () => {
                   }
                 >
                   <div className="text-banner-cont">
-                    <span className="tagline">{t("banner.welcome_portfolio")}</span>
+                    <span className="tagline">
+                      {t("banner.welcome_portfolio")}
+                    </span>
                     <h1>
                       {t("banner.hi_iam")}
                       <span>{t("banner.antonious_nasr")}</span>
                     </h1>
                     <div className="text-animate">
-                      <h3>{t("banner.frontend_developer")}</h3>
+                      <h2>{t("banner.frontend_developer")}</h2>
                     </div>
                     <p>{t("banner.banner_desc")}</p>
                     <div
@@ -85,6 +87,7 @@ export const Banner = () => {
                       href="https://www.linkedin.com/in/antonious-nasr-a20887196"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="LinkedIn Profile"
                     >
                       <FaLinkedin />
                     </a>
@@ -92,6 +95,7 @@ export const Banner = () => {
                       href="https://github.com/ANT0NI0US"
                       target="_blank"
                       rel="noopener noreferrer"
+                      aria-label="GitHub Profile"
                     >
                       <FaGithub />
                     </a>

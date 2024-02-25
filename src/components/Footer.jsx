@@ -32,15 +32,16 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} sm={6}>
-            <div class="head">
+            <div className="head">
               <img src={getLogo()} alt="Logo" />
             </div>
-            <div class="body">
+            <div className="body">
               <div className="social-icon">
                 <a
                   href="https://www.linkedin.com/in/antonious-nasr-a20887196"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="LinkedIn Profile"
                 >
                   <FaLinkedin />
                 </a>
@@ -48,6 +49,7 @@ export const Footer = () => {
                   href="https://github.com/ANT0NI0US"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="GitHub Profile"
                 >
                   <FaGithub />
                 </a>
@@ -59,22 +61,22 @@ export const Footer = () => {
             sm={6}
             className="text-center text-sm-end social-media"
           >
-            <div class="side">
+            <div className="side">
               <FaLocationDot />
               <p>{t("footer.egypt-cairo")}</p>
             </div>
-            <div class="side">
+            <div className="side">
               <MdEmail />
               <p>antoniousnasr3@gmail.com</p>
             </div>
-            <div class="side">
+            <div className="side">
               <FaPhoneVolume />
               <p>{t("footer.my-phone-number")}</p>
             </div>
           </Col>
         </Row>
       </Container>
-      <div class="text">
+      <div className="text">
         <p>{t("footer.the-year")}</p>
       </div>
     </footer>

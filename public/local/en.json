@@ -8,7 +8,14 @@
     "home": "Home",
     "skills": "Skills",
     "projects": "Projects",
-    "let_connect": "Let’s Connect"
+    "let_connect": "Let’s Connect",
+    "settings": "Settings",
+    "dark": "Dark",
+    "light": "Light",
+    "english": "English",
+    "arabic": "Arabic",
+    "darkMode": "Dark Mode",
+    "languages": "Languages"
   },
   "banner": {
     "welcome_portfolio": "Welcome to my Portfolio",
@@ -19,7 +26,7 @@
     "my_cv": "My CV"
   },
   "skills": {
-    "skills":"Skills",
+    "skills": "Skills",
     "skills_desc": "As a dedicated frontend developer, I possess a robust skill set in creating engaging and responsive user interfaces. Proficient in both design and functionality, I bring expertise in various frontend technologies to deliver seamless and visually appealing web experiences. My skills encompass the essential languages and tools, ensuring a well-rounded approach to web development.",
     "all_skills": {
       "Core_Languages": {
@@ -73,7 +80,7 @@
         "title": "Mind Game"
       },
       "darkModeProject": {
-        "title": "Dark Mode Project"
+        "title": "Images Project"
       },
       "firstProject": {
         "title": "First Project"
@@ -82,13 +89,7 @@
         "title": "Cartoon Project"
       },
       "quiz": {
-        "title": "Quiz"
-      },
-      "sliderController": {
-        "title": "Slider Controller"
-      },
-      "todoList": {
-        "title": "Todo List"
+        "title": "Quiz Game"
       },
       "dashboard": {
         "title": "Dashboard"
@@ -99,10 +100,10 @@
     },
     "htmlBooststrap": {
       "bondiProject": {
-        "title": "Bondi Project"
+        "title": "Bondi"
       },
       "eliteCropProject": {
-        "title": "EliteCrop Project"
+        "title": "EliteCrop"
       }
     }
   },

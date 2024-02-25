@@ -4,14 +4,22 @@ import logo from "../assets/img/my-logo.png";
 import { HashLink } from "react-router-hash-link";
 import { BrowserRouter as Router } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { MdOutlineLanguage } from "react-icons/md";
 import { useTheme } from "../ThemeProvider";
+import { useMediaQuery } from "react-responsive";
 
 export const NavBar = () => {
-  const { toggleTheme } = useTheme();
+  const { toggleTheme, theme } = useTheme();
   const [t, i18n] = useTranslation();
   const [activeLink, setActiveLink] = useState("home");
   const [scrolled, setScrolled] = useState(false);
+  const [dropStart, setDropStart] = useState(false);
+
+  // Use useMediaQuery hook to check for screen size changes
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
+  useEffect(() => {
+    setDropStart(isMobile); // Update dropStart state when screen size changes
+  }, [isMobile]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -32,6 +40,7 @@ export const NavBar = () => {
   };
 
   const [selectedLanguage, setSelectedLanguage] = useState("en");
+  const [selectedTheme, setSelectedTheme] = useState("dark");
 
   const handleLanguageChange = (languageType) => {
     setSelectedLanguage(languageType);
@@ -57,6 +66,10 @@ export const NavBar = () => {
     const languageCookie = getCookie("language");
     setSelectedLanguage(languageCookie);
   }, []);
+
+  useEffect(() => {
+    setSelectedTheme(theme);
+  }, [theme]);
 
   return (
     <Router>
@@ -103,8 +116,8 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <HashLink to="#connect">
-                <button className="vvd">
-                  <span>{t("navbar.let_connect")}</span>
+                <button className="vvd" type="button" aria-label="Connect US">
+                  {t("navbar.let_connect")}
                 </button>
               </HashLink>
             </span>
@@ -122,28 +135,60 @@ export const NavBar = () => {
             <div className="select-cont">
               <div className="langauage-icon-cont">
                 <NavDropdown
-                  title="Settings"
+                  title={t("navbar.settings")}
                   id="settings-dropdown"
-                  className="ms-auto"
+                  className={`${
+                    selectedLanguage === "en" ? "en" : "ar"
+                  } ms-auto`}
                 >
-                  <NavDropdown className="dropstart" title="Dark Mode">
-                    <NavDropdown.Item onClick={() => toggleTheme("light")}>
-                      Light
+                  <NavDropdown
+                    className={`${
+                      selectedLanguage === "en"
+                        ? dropStart
+                          ? "mid"
+                          : "dropstart"
+                        : dropStart
+                        ? "mid"
+                        : "dropend"
+                    }`}
+                    title={t("navbar.darkMode")}
+                  >
+                    <NavDropdown.Item
+                      onClick={() => toggleTheme("light")}
+                      active={selectedTheme === "light"}
+                    >
+                      {t("navbar.light")}
                     </NavDropdown.Item>
-                    <NavDropdown.Item onClick={() => toggleTheme("dark")}>
-                      Dark
+                    <NavDropdown.Item
+                      onClick={() => toggleTheme("dark")}
+                      active={selectedTheme === "dark"}
+                    >
+                      {t("navbar.dark")}
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <NavDropdown title="Languages" className="dropstart">
+                  <NavDropdown
+                    title={t("navbar.languages")}
+                    className={`${
+                      selectedLanguage === "en"
+                        ? dropStart
+                          ? "mid"
+                          : "dropstart"
+                        : dropStart
+                        ? "mid"
+                        : "dropend"
+                    }`}
+                  >
                     <NavDropdown.Item
                       onClick={() => handleLanguageChange("en")}
+                      active={selectedLanguage === "en"}
                     >
-                      English
+                      {t("navbar.english")}
                     </NavDropdown.Item>
                     <NavDropdown.Item
                       onClick={() => handleLanguageChange("ar")}
+                      active={selectedLanguage === "ar"}
                     >
-                      Arabic
+                      {t("navbar.arabic")}
                     </NavDropdown.Item>
                   </NavDropdown>
                 </NavDropdown>
