@@ -25,7 +25,6 @@ export const Contact = () => {
 
   useEffect(() => {
     setButtonText(t("contact_us.send"));
-    // trigger();
     reset();
   }, [i18n.language, t, reset]);
 
