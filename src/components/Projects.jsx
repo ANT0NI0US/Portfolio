@@ -32,6 +32,12 @@ export const Projects = () => {
       imgUrl: "https://i.ibb.co/mXb7bSP/Clinc.webp",
       url: "https://portal.clinicmarkter.niyat.sa/#/adminlogin",
     },
+    {
+      title: "EVOGYM",
+      description: t("projects.description"),
+      imgUrl: "https://i.ibb.co/vQ27c0R/EVOGYM.webp",
+      url: "https://evogym-site.netlify.app/",
+    },
   ];
 
   const HtmlCssJava = [
@@ -93,7 +99,6 @@ export const Projects = () => {
       url: "https://timer-json-quiz.netlify.app/",
     },
   ];
-
   return (
     <section className="project" id="projects">
       <Container>
