@@ -70,8 +70,7 @@ export const Skills = () => {
         ],
       },
     ]);
-    
-  }, [i18n.language, t]);
+  }, [i18n.language]);
 
   const [isVisible, setIsVisible] = useState(false);
 
