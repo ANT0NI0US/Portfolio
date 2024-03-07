@@ -10,70 +10,62 @@ export const Projects = () => {
   const React = [
     {
       title: "ChatBot",
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/gthm3Hb/ChatBot.webp",
       url: "https://chatbotv2.mygatein.com/#/login",
     },
     {
       title: t("projects.GraduationProject.title"),
-      description: t("projects.description"),
       imgUrl: `https://i.ibb.co/SxC6C4D/LMS-Ain-shams.webp`,
       url: "https://drive.google.com/file/d/1XKfzSKEvQWMN1oy2mxsOZXppuKHrVFe2/view?usp=sharing",
     },
     {
       title: "Restico",
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/4PpHkc7/Restico.webp",
       url: "https://restecho.portal.smartgate-egypt.com/",
     },
     {
       title: "Clinc Markter",
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/mXb7bSP/Clinc.webp",
       url: "https://portal.clinicmarkter.niyat.sa/#/adminlogin",
     },
     {
       title: "EVOGYM",
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/vQ27c0R/EVOGYM.webp",
       url: "https://evogym-site.netlify.app/",
+      githubLink: "https://github.com/ANT0NI0US/EvoGYM",
     },
   ];
 
   const HtmlCssJava = [
     {
-      title: t("projects.HtmlCssJava.darkModeProject.title"),
-      description: t("projects.description"),
+      title: "Kasper website",
       imgUrl: "https://i.ibb.co/7zqq3Fs/dark-mode-project.webp",
-      url: "https://slider-dark-mode.netlify.app/",
+      url: "https://kasper-template-website.netlify.app/",
+      githubLink: "https://github.com/ANT0NI0US/KasperTemplateWebsite",
     },
     {
       title: t("projects.HtmlCssJava.firstProject.title"),
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/py9SBWx/html-css-first-project.webp",
       url: "https://html-css-first-project.netlify.app/",
     },
     {
       title: t("projects.HtmlCssJava.cartoonProject.title"),
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/zXKb8tV/cartoon-project.webp",
-      url: "https://cartoon-projectt.netlify.app/",
+      url: "https://cartoon-projecttt.netlify.app/",
+      githubLink: "https://github.com/ANT0NI0US/Cartoon",
     },
     {
       title: t("projects.HtmlCssJava.dashboard.title"),
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/TcQMCSJ/dashboard.webp",
       url: "https://dashboard-css-html.netlify.app/",
     },
     {
       title: t("projects.htmlBooststrap.bondiProject.title"),
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/z6jF1nR/bootstrap-project-one.webp",
       url: "https://bootstrap-project-onee.netlify.app/",
     },
     {
       title: t("projects.htmlBooststrap.eliteCropProject.title"),
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/02thynj/bootstrap-project-2.webp",
       url: "https://bootstrap-project-twoo.netlify.app/",
     },
@@ -82,19 +74,16 @@ export const Projects = () => {
   const htmlBooststrap = [
     {
       title: t("projects.HtmlCssJava.mindGame.title"),
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/xGn5qyc/mind-game.webp",
       url: "https://mind-game-project.netlify.app/",
     },
     {
       title: t("projects.HtmlCssJava.hangmanGame.title"),
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/vdmCMbD/hangman-game.webp",
       url: "https://hangout-game.netlify.app/",
     },
     {
       title: t("projects.HtmlCssJava.quiz.title"),
-      description: t("projects.description"),
       imgUrl: "https://i.ibb.co/KsqhmPm/Quiz.webp",
       url: "https://timer-json-quiz.netlify.app/",
     },
