@@ -876,8 +876,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-imgbx {
   position: relative;
   border-radius: 30px;
+  padding: 15px;
   overflow: hidden;
   margin-bottom: 24px;
+  background-color: var(--cards-background);
   height: 90%;
 }
 @media (max-width: 768px) {
@@ -897,10 +899,27 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   height: 0;
   transition: 0.4s ease-in-out;
+  top: 0;
+  left: 0;
 }
 .proj-imgbx:hover::before {
   height: 100%;
 }
+
+.proj-imgbx img {
+  border-radius: 30px;
+  width: 100% !important;
+  height: 80% !important;
+  object-fit: cover;
+}
+.proj-imgbx p {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+  color: var(--text-color) !important;
+}
+
 .proj-txtx {
   position: absolute;
   text-align: center;
@@ -910,31 +929,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   transition: 0.5s ease-in-out;
   opacity: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 .proj-imgbx:hover .proj-txtx {
   top: 50%;
   opacity: 1;
 }
+.proj-txtx svg {
+  color: var(--text-color) !important;
+  font-size: 30px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
 
-.proj-imgbx img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover;
+.proj-txtx svg:hover {
+  color: var(--second-color) !important;
 }
-.proj-txtx p {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  line-height: 1.1em;
-  color: var(--second-secotion-color) !important;
-}
-.proj-txtx span {
-  font-style: italic;
-  font-weight: 400;
-  font-size: 15px;
-  letter-spacing: 0.8px;
-  color: var(--second-secotion-color) !important;
-}
+
 /************ Contact Css ************/
 .contact {
   background: linear-gradient(

@@ -23,6 +23,7 @@ export const ThemeProvider = ({ children }) => {
       "--linear-gradient-color-two": "rgba(74, 47, 189, 0.5) 111.58%",
       "--error-color": "#ff4545",
       "--button-send-color": "#0c2670",
+      "--cards-background": "#d6caca75",
     },
     dark: {
       "--background-color": "#151515",
@@ -36,6 +37,7 @@ export const ThemeProvider = ({ children }) => {
       "--linear-gradient-color-two": "#4C565D",
       "--error-color": "red",
       "--button-send-color": "white",
+      "--cards-background": "#c4c0c00d",
     },
   };
 
