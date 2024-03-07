@@ -50,7 +50,7 @@ export const Projects = () => {
     },
     {
       title: t("projects.HtmlCssJava.cartoonProject.title"),
-      imgUrl: "https://i.ibb.co/zXKb8tV/cartoon-project.webp",
+      imgUrl: "https://i.ibb.co/yRV8PsK/cartoon-project.webp",
       url: "https://cartoon-projecttt.netlify.app/",
       githubLink: "https://github.com/ANT0NI0US/Cartoon",
     },
